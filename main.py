@@ -19,23 +19,35 @@ dp = Dispatcher(bot)
 logging.basicConfig(level=logging.INFO)
 pending_confirm = {}
 
-# === SHIO ===
+# === SHIO 2026 ===
 SHIO_FIX = {
-    "01":"🐎 KUDA","13":"🐎 KUDA","25":"🐎 KUDA","37":"🐎 KUDA","49":"🐎 KUDA","61":"🐎 KUDA","73":"🐎 KUDA","85":"🐎 KUDA","97":"🐎 KUDA",
-    "02":"🐍 ULAR","14":"🐍 ULAR","26":"🐍 ULAR","38":"🐍 ULAR","50":"🐍 ULAR","62":"🐍 ULAR","74":"🐍 ULAR","86":"🐍 ULAR","98":"🐍 ULAR",
-    "03":"🐉 NAGA","15":"🐉 NAGA","27":"🐉 NAGA","39":"🐉 NAGA","51":"🐉 NAGA","63":"🐉 NAGA","75":"🐉 NAGA","87":"🐉 NAGA","99":"🐉 NAGA",
-    "04":"🐇 KELINCI","16":"🐇 KELINCI","28":"🐇 KELINCI","40":"🐇 KELINCI","52":"🐇 KELINCI","64":"🐇 KELINCI","76":"🐇 KELINCI","88":"🐇 KELINCI","00":"🐇 KELINCI",
-    "05":"🐅 HARIMAU","17":"🐅 HARIMAU","29":"🐅 HARIMAU","41":"🐅 HARIMAU","53":"🐅 HARIMAU","65":"🐅 HARIMAU","77":"🐅 HARIMAU","89":"🐅 HARIMAU",
-    "06":"🐂 KERBAU","18":"🐂 KERBAU","30":"🐂 KERBAU","42":"🐂 KERBAU","54":"🐂 KERBAU","66":"🐂 KERBAU","78":"🐂 KERBAU","90":"🐂 KERBAU",
-    "07":"🐀 TIKUS","19":"🐀 TIKUS","31":"🐀 TIKUS","43":"🐀 TIKUS","55":"🐀 TIKUS","67":"🐀 TIKUS","79":"🐀 TIKUS","91":"🐀 TIKUS",
-    "08":"🐖 BABI","20":"🐖 BABI","32":"🐖 BABI","44":"🐖 BABI","56":"🐖 BABI","68":"🐖 BABI","80":"🐖 BABI","92":"🐖 BABI",
-    "09":"🐕 ANJING","21":"🐕 ANJING","33":"🐕 ANJING","45":"🐕 ANJING","57":"🐕 ANJING","69":"🐕 ANJING","81":"🐕 ANJING","93":"🐕 ANJING",
-    "10":"🐓 AYAM","22":"🐓 AYAM","34":"🐓 AYAM","46":"🐓 AYAM","58":"🐓 AYAM","70":"🐓 AYAM","82":"🐓 AYAM","94":"🐓 AYAM",
-    "11":"🐒 MONYET","23":"🐒 MONYET","35":"🐒 MONYET","47":"🐒 MONYET","59":"🐒 MONYET","71":"🐒 MONYET","83":"🐒 MONYET","95":"🐒 MONYET",
-    "12":"🐐 KAMBING","24":"🐐 KAMBING","36":"🐐 KAMBING","48":"🐐 KAMBING","60":"🐐 KAMBING","72":"🐐 KAMBING","84":"🐐 KAMBING","96":"🐐 KAMBING"
+"01":"🐎 KUDA","13":"🐎 KUDA","25":"🐎 KUDA","37":"🐎 KUDA","49":"🐎 KUDA","61":"🐎 KUDA","73":"🐎 KUDA","85":"🐎 KUDA","97":"🐎 KUDA",
+
+"02":"🐍 ULAR","14":"🐍 ULAR","26":"🐍 ULAR","38":"🐍 ULAR","50":"🐍 ULAR","62":"🐍 ULAR","74":"🐍 ULAR","86":"🐍 ULAR","98":"🐍 ULAR",
+
+"03":"🐉 NAGA","15":"🐉 NAGA","27":"🐉 NAGA","39":"🐉 NAGA","51":"🐉 NAGA","63":"🐉 NAGA","75":"🐉 NAGA","87":"🐉 NAGA","99":"🐉 NAGA",
+
+"04":"🐇 KELINCI","16":"🐇 KELINCI","28":"🐇 KELINCI","40":"🐇 KELINCI","52":"🐇 KELINCI","64":"🐇 KELINCI","76":"🐇 KELINCI","88":"🐇 KELINCI","00":"🐇 KELINCI",
+
+"05":"🐅 HARIMAU","17":"🐅 HARIMAU","29":"🐅 HARIMAU","41":"🐅 HARIMAU","53":"🐅 HARIMAU","65":"🐅 HARIMAU","77":"🐅 HARIMAU","89":"🐅 HARIMAU",
+
+"06":"🐂 KERBAU","18":"🐂 KERBAU","30":"🐂 KERBAU","42":"🐂 KERBAU","54":"🐂 KERBAU","66":"🐂 KERBAU","78":"🐂 KERBAU","90":"🐂 KERBAU",
+
+"07":"🐀 TIKUS","19":"🐀 TIKUS","31":"🐀 TIKUS","43":"🐀 TIKUS","55":"🐀 TIKUS","67":"🐀 TIKUS","79":"🐀 TIKUS","91":"🐀 TIKUS",
+
+"08":"🐖 BABI","20":"🐖 BABI","32":"🐖 BABI","44":"🐖 BABI","56":"🐖 BABI","68":"🐖 BABI","80":"🐖 BABI","92":"🐖 BABI",
+
+"09":"🐕 ANJING","21":"🐕 ANJING","33":"🐕 ANJING","45":"🐕 ANJING","57":"🐕 ANJING","69":"🐕 ANJING","81":"🐕 ANJING","93":"🐕 ANJING",
+
+"10":"🐓 AYAM","22":"🐓 AYAM","34":"🐓 AYAM","46":"🐓 AYAM","58":"🐓 AYAM","70":"🐓 AYAM","82":"🐓 AYAM","94":"🐓 AYAM",
+
+"11":"🐒 MONYET","23":"🐒 MONYET","35":"🐒 MONYET","47":"🐒 MONYET","59":"🐒 MONYET","71":"🐒 MONYET","83":"🐒 MONYET","95":"🐒 MONYET",
+
+"12":"🐐 KAMBING","24":"🐐 KAMBING","36":"🐐 KAMBING","48":"🐐 KAMBING","60":"🐐 KAMBING","72":"🐐 KAMBING","84":"🐐 KAMBING","96":"🐐 KAMBING"
 }
+
 def get_shio_by_last2d(angka):
-    dua_digit = str(angka)[-2:].zfill(2)
+    dua_digit = str(angka)[-2:].zfill(2)  # ambil 2D belakang
     return SHIO_FIX.get(dua_digit, "❓ Tidak Diketahui")
 
 def is_admin(user_id): return user_id in ADMIN_IDS
