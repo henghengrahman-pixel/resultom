@@ -6,7 +6,7 @@ from aiogram.types import InputFile, InlineKeyboardMarkup, InlineKeyboardButton
 from PIL import Image, ImageDraw, ImageFont
 
 TOKEN = "7499685841:AAGMWsU0hLs82OLX9eKubnvP8f7ghRN45UU"
-CHANNEL_ID = "@Prediksi_omtogel"
+CHANNEL_ID = "@omtogel_info"
 ADMIN_IDS = [6918801560, 5397964203, 6670157806, 5780186213, 7230912053]
 TEMPLATE_DIR = "template"
 FONT_PATH = "assets/fonts/arialbd.ttf"
