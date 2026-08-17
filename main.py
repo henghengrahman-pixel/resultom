@@ -218,9 +218,9 @@ async def send_result(pasaran: str, angka: str, row: Optional[ResultRow] = None,
 ━━━━━━━━━━━━━━━"""
     keyboard = InlineKeyboardMarkup(row_width=1)
     keyboard.add(
-        InlineKeyboardButton("🔐 LOGIN OMTOGEL SEKARANG", url=os.getenv("LOGIN_URL", "https://omtogelbonanza.xyz/")),
+        InlineKeyboardButton("🔐 LOGIN OMTOGEL SEKARANG", url=os.getenv("LOGIN_URL", "https://omtogelsky.com/")),
         InlineKeyboardButton("💬 CHAT ADMIN OMTOGEL", url=os.getenv("CS_URL", "https://t.me/CSOMTOGEL2")),
-        InlineKeyboardButton("🏆 ROOM LOMBA TEBAK ANGKA 2D", url=os.getenv("LOMBA_URL", "https://t.me/LOMBA2D_OMTOGEL")),
+        InlineKeyboardButton("💬 WHATSAPP OMTOGEL", url=os.getenv("LOMBA_URL", "https://layanancsomtogel.live/")),
     )
     try:
         sent = await bot.send_photo(target, InputFile(str(result_path)), caption=caption, reply_markup=keyboard)
