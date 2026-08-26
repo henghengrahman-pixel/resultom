@@ -893,14 +893,13 @@ async def facebook_queue_status(request: web.Request):
 
 
 def public_job(job, request=None):
-    base = ""
-    if request is not None:
-        base = f"{request.scheme}://{request.host}"
     return {
         "jobId": job.get("jobId"), "marketId": job.get("marketId"),
         "marketName": job.get("marketName"), "resultNumber": job.get("resultNumber"),
         "resultDate": job.get("resultDate"), "caption": job.get("caption"),
-        "imageUrl": base + job.get("imageUrl", ""), "facebookTarget": job.get("facebookTarget"),
+        # Selalu path relatif. request.scheme di belakang proxy Railway dapat terbaca
+        # sebagai http dan menyebabkan Chrome memblokir mixed-content fetch.
+        "imageUrl": job.get("imageUrl", ""), "facebookTarget": job.get("facebookTarget"),
         "createdAt": job.get("createdAt"), "status": job.get("status"),
         "attempt": job.get("attempt"), "lastError": job.get("lastError"),
         "idempotencyKey": job.get("idempotencyKey"),
